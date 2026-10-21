@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soufiane — Portfolio</title>
+<meta name="description" content="Soufiane, a Digital Development student at ISGI. Websites, databases and secure applications.">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="gh" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+<symbol id="li" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+<symbol id="dc" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></symbol>
+<!-- desktop / monitor icon (outline) -->
+<symbol id="desk" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 4h18v12H3zM8 20h8M12 16v4"/></symbol>
+<!-- download icon (outline) -->
+<symbol id="dl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></symbol>
+</svg>
+
+<!-- Intro: logo → social icons → credit → site -->
+<div id="intro">
+  <div class="ilogo s" id="s1" aria-label="Soufiane dev">
+    <i>&lt;</i><svg class="i desk"><use href="#desk"/></svg><i>/&gt;</i><u></u>
+  </div>
+  <div class="isoc s" id="s2">
+    <a href="https://github.com/SOUFIANE-X2" target="_blank" rel="noopener" aria-label="GitHub"><svg class="i"><use href="#gh"/></svg></a>
+    <a href="https://www.linkedin.com/in/soufiane-inarain" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="i"><use href="#li"/></svg></a>
+    <a href="https://discord.com/users/1448300804376236124" target="_blank" rel="noopener" aria-label="Discord"><svg class="i"><use href="#dc"/></svg></a>
+  </div>
+  <div class="credit s" id="s3">Designed by <b>Soufiane</b></div>
+</div>
+
+<canvas id="bg"></canvas>
+
+<nav>
+  <div class="logo">soufiane<b>.dev</b></div>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#recipe">My recipe</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="cv" href="#contact">Hire me</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="badge"><i></i>OPEN TO WORK</div>
+  <h1>Hi, I’m <em>Soufiane</em></h1>
+  <p class="role">I’m a <span class="word" id="word"></span></p>
+  <p class="hero-text">I’m <b>Soufiane</b>, 19 years old, a student at ISGI in the Digital Development track. I enjoy building websites, learning how databases work, and discovering how to keep applications secure.</p>
+  <div class="btns">
+    <a class="btn main" href="#projects">See my work →</a>
+    <a class="btn" href="assets/cv/Soufiane-CV.pdf" download><svg class="i"><use href="#dl"/></svg>Download CV</a>
+    <a class="btn" href="#contact">Contact me</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="rv">About <span>me</span></h2>
+  <div class="about-grid">
+    <div class="about-copy rv">
+      <p>I’m Soufiane, a 19-year-old student at ISGI in the Digital Development track. I started with the basics of the web and I’m now building real projects to get better every day.</p>
+      <p>I like turning an idea into a working website, understanding how data is stored in a database, and learning how to protect an application. I learn by building, breaking things and fixing them.</p>
+      <p>I’m looking for an internship where I can learn from a team and take on real tasks.</p>
+    </div>
+    <div class="code-card rv" aria-label="About me as code">
+      <div class="code-bar"><i></i><i></i><i></i><span>soufiane.js</span></div>
+<pre><code><span class="k">const</span> <span class="v">soufiane</span> = {
+  <span class="p">role</span>: <span class="str">"Dev student"</span>,
+  <span class="p">school</span>: <span class="str">"ISGI"</span>,
+  <span class="p">age</span>: <span class="n">19</span>,
+  <span class="p">skills</span>: [<span class="str">"HTML"</span>, <span class="str">"CSS"</span>, <span class="str">"JS"</span>],
+  <span class="p">learning</span>: [<span class="str">"Databases"</span>, <span class="str">"Security"</span>],
+  <span class="p">goal</span>: <span class="str">"Build secure apps"</span>,
+};
+
+<span class="c">// Let's build something great</span></code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="rv">My <span>Skills</span></h2>
+  <p class="lead rv">The tools I use to build and learn.</p>
+  <div class="skills" id="skills-grid"></div>
+</section>
+
+<section id="projects">
+  <h2 class="rv">My <span>Projects</span></h2>
+  <p class="lead rv">Everything I build lives on GitHub, and this list grows as I do.</p>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="recipe">
+  <h2 class="rv">My <span>recipe</span></h2>
+  <p class="lead rv">What goes into everything I make.</p>
+  <div class="bento">
+    <div class="tile w2 rv"><span class="ic">🧩</span><h3>Clean code</h3><p>Readable, organized and easy to extend, so the next feature never feels like a fight.</p></div>
+    <div class="tile rv"><span class="ic">⚡</span><h3>Fast</h3><p>Light pages that load quickly.</p></div>
+    <div class="tile rv"><span class="ic">🎨</span><h3>Pixel care</h3><p>Spacing, color and details.</p></div>
+    <div class="tile rv"><span class="ic">📱</span><h3>Every screen</h3><p>Looks right on phone and desktop.</p></div>
+    <div class="tile w2 rv"><span class="ic">🤝</span><h3>Real users first</h3><p>I build for the person using it, not just for the screenshot.</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="rv">Got an idea?<br><span>Let’s make it real.</span></h2>
+  <div class="btns rv">
+    <a class="btn main" href="mailto:inarainsoufiane@gmail.com">Say hello →</a>
+    <a class="btn" href="https://github.com/SOUFIANE-X2" target="_blank" rel="noopener"><svg class="i"><use href="#gh"/></svg>GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/soufiane-inarain" target="_blank" rel="noopener"><svg class="i"><use href="#li"/></svg>LinkedIn</a>
+    <a class="btn" href="https://discord.com/users/1448300804376236124" target="_blank" rel="noopener"><svg class="i"><use href="#dc"/></svg>Discord</a>
+  </div>
+</section>
+
+<footer>© 2026 Soufiane. Built by hand.</footer>
+
+<script src="js/projects.js"></script>
+<script src="js/skills.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
