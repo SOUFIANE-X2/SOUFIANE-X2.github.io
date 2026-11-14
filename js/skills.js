@@ -1,20 +1,45 @@
-/* ===== SKILLS: add a skill to a group and it shows up with its icon =====
-   Icons come from the Devicon project (pinned version). To work offline,
-   download the SVGs into assets/icons/ and change `icon` to a local path. */
-const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/";
+/* ===== SKILLS ======================================================
+   Each group becomes a tab in the Skills section. Icons are local SVGs
+   from the Devicon project, stored in `assets/icons/devicon/`.
+   Add a skill by adding `{ name, icon }` to a group's items.
+==================================================================== */
 const skillGroups = [
-  { title: "Front-end", items: [
-    { name: "HTML",       icon: "html5/html5-original.svg" },
-    { name: "CSS",        icon: "css3/css3-original.svg" },
-    { name: "JavaScript", icon: "javascript/javascript-original.svg" },
-    { name: "React",      icon: "react/react-original.svg" },
-    { name: "Bootstrap",  icon: "bootstrap/bootstrap-original.svg" }
-  ]},
-  { title: "Back-end", items: [
-    { name: "PHP",    icon: "php/php-original.svg" },
-    { name: "Python", icon: "python/python-original.svg" }
-  ]},
-  { title: "Database", items: [
-    { name: "MySQL", icon: "mysql/mysql-original.svg" }
-  ]}
+  {
+    id: "frontend",
+    label: "Front-end",
+    blurb: "The layer people see and touch: structure, style and interaction.",
+    items: [
+      { name: "HTML",       icon: "assets/icons/devicon/html5.svg" },
+      { name: "CSS",        icon: "assets/icons/devicon/css3.svg" },
+      { name: "JavaScript", icon: "assets/icons/devicon/javascript.svg" },
+      { name: "React",      icon: "assets/icons/devicon/react.svg" },
+      { name: "Bootstrap",  icon: "assets/icons/devicon/bootstrap.svg" }
+    ]
+  },
+  {
+    id: "backend",
+    label: "Back-end",
+    blurb: "The logic behind the page: requests, rules and server-side code.",
+    items: [
+      { name: "PHP",    icon: "assets/icons/devicon/php.svg" },
+      { name: "Python", icon: "assets/icons/devicon/python.svg" }
+    ]
+  },
+  {
+    id: "database",
+    label: "Database",
+    blurb: "Where the data lives, and how to ask it the right questions.",
+    items: [
+      { name: "MySQL", icon: "assets/icons/devicon/mysql.svg" }
+    ]
+  },
+  {
+    id: "tools",
+    label: "Tools",
+    blurb: "How I build, version and ship the things I make.",
+    items: [
+      { name: "Git",    icon: "assets/icons/devicon/git.svg" },
+      { name: "GitHub", icon: "assets/icons/devicon/github.svg" }
+    ]
+  }
 ];
