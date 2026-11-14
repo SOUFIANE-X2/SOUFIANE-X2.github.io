@@ -2,13 +2,16 @@
 
 My personal portfolio: a dark editorial-tech site with a warm orange accent, built by hand with **HTML, CSS and JavaScript** — no frameworks, no build step.
 
-Live: https://soufiane-x2.github.io/
+**Live site:** <https://soufiane-x2.github.io/>
+
+> Seeing an older version? Hard-refresh once with **Ctrl + Shift + R** (Mac: **Cmd + Shift + R**). GitHub Pages can cache the HTML for up to 10 minutes.
 
 ## Highlights
 
 - **Editorial hero** — a full-width giant name, a serif italic intro line and an orbiting tech visual with floating status chips.
 - **Light & dark theme** — toggle in the header, remembered in `localStorage`, default dark. Both themes pass WCAG contrast checks.
-- **Motion with restraint** — intro curtain, scroll reveals, a marquee, card tilt and a custom cursor on desktop. Everything stops for `prefers-reduced-motion`.
+- **Loading screen** — a brief branded intro with my social icons and a progress bar, then a smooth fade into the site. Click, scroll or press any key to skip.
+- **Motion with restraint** — scroll reveals, a marquee, card tilt and a custom cursor on desktop. Everything stops for `prefers-reduced-motion`.
 - **Skills tabs** — four groups (Front-end, Back-end, Database, Tools) with keyboard support and local Devicon icons, so no CDN is needed.
 - **Project cards** — the whole card is a link to the project's GitHub repository. A separate **Live demo** pill opens the deployed site.
 - **Live GitHub count** — the repository card reads the public repo count from the GitHub API, with a static fallback when offline.
@@ -46,7 +49,7 @@ For a local server (recommended, so the PDF and icons load exactly like producti
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000.
+Then open `http://localhost:8000` in your browser. (This local address only works while the server is running on your own computer — it is not the public site.)
 
 > Adding or changing CSS/JS? Bump the `?v=` number on the `style.css` / `main.js` links in `index.html` so browsers do not serve a cached copy.
 

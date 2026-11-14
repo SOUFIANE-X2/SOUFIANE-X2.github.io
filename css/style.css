@@ -186,30 +186,56 @@ html.has-cursor,html.has-cursor a,html.has-cursor button{cursor:none}
   transform:scaleX(0);transform-origin:0 50%;
 }
 
-/* ---------- intro ---------- */
+/* ---------- intro / loading screen ---------- */
 #intro{
   position:fixed;inset:0;z-index:200;
   display:grid;place-items:center;
-  background:var(--bg);
-  transition:opacity .6s ease,visibility .6s ease;
+  background:
+    radial-gradient(circle at 50% 38%,var(--surface) 0%,transparent 62%),
+    var(--bg);
+  transition:opacity .9s cubic-bezier(.65,0,.35,1),transform .9s cubic-bezier(.65,0,.35,1),visibility .9s;
 }
-#intro.out{opacity:0;visibility:hidden}
-.intro-inner{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;padding:24px}
+#intro.out{opacity:0;transform:scale(1.035);visibility:hidden;pointer-events:none}
+.intro-inner{display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;max-width:440px;width:100%}
 .intro-mark{
   font-family:var(--font-display);font-weight:800;font-size:clamp(2.6rem,9vw,4.4rem);
-  letter-spacing:-.04em;line-height:1;
+  letter-spacing:-.04em;line-height:1;text-shadow:0 0 44px var(--accent-soft);
   opacity:0;transform:translateY(14px);animation:introMark .7s .1s cubic-bezier(.2,.8,.2,1) forwards;
 }
 .intro-mark span{color:var(--accent)}
 @keyframes introMark{to{opacity:1;transform:none}}
-.intro-bar{width:150px;height:2px;background:var(--line);overflow:hidden;border-radius:2px}
-.intro-bar i{display:block;height:100%;width:0;background:var(--accent);animation:introBar 1.15s .15s cubic-bezier(.6,0,.2,1) forwards}
-@keyframes introBar{to{width:100%}}
-.intro-meta{
-  font-family:var(--font-mono);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);
-  opacity:0;animation:introMark .6s .45s forwards;
+.intro-name{
+  margin-top:24px;font-family:var(--font-display);font-weight:700;
+  font-size:clamp(1.1rem,3.4vw,1.35rem);letter-spacing:-.02em;color:var(--text);
+  opacity:0;transform:translateY(10px);animation:introMark .65s .34s cubic-bezier(.2,.8,.2,1) forwards;
 }
-.intro-meta span{color:var(--accent)}
+.intro-role{
+  margin-top:7px;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--muted);
+  opacity:0;transform:translateY(10px);animation:introMark .65s .48s cubic-bezier(.2,.8,.2,1) forwards;
+}
+.intro-role span{color:var(--accent)}
+.intro-socials{display:flex;align-items:center;gap:12px;margin-top:28px}
+.intro-social{
+  width:44px;height:44px;display:grid;place-items:center;border-radius:50%;
+  border:1px solid var(--line);background:var(--surface);color:var(--muted);
+  opacity:0;transform:translateY(12px) scale(.9);
+  animation:introIcon .55s cubic-bezier(.2,.8,.2,1) forwards;
+  animation-delay:calc(.7s + var(--i) * .14s);
+}
+.intro-social .ico{width:18px;height:18px;fill:currentColor}
+@keyframes introIcon{to{opacity:1;transform:none}}
+.intro-bar{
+  width:170px;height:2px;margin-top:32px;border-radius:2px;
+  background:var(--line);overflow:hidden;
+  opacity:0;animation:introMark .4s .55s forwards;
+}
+.intro-bar i{
+  display:block;height:100%;width:0;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  animation:introBar 2s .5s cubic-bezier(.65,0,.35,1) forwards;
+}
+@keyframes introBar{to{width:100%}}
 .intro-skip{
   position:absolute;bottom:calc(26px + env(safe-area-inset-bottom,0px));
   font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
@@ -830,7 +856,9 @@ html[data-theme="light"] .hero-glow{opacity:.8}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   .rv{opacity:1;translate:0 0}
-  .intro-mark,.intro-meta,.intro-bar i{animation:none;opacity:1;width:100%}
+  .intro-mark,.intro-name,.intro-role,.intro-social{animation:none;opacity:1;transform:none}
+  .intro-bar{animation:none;opacity:1}
+  .intro-bar i{animation:none;width:100%}
   .scroll-cue i{animation:none}
   .hero-glow{animation:none}
   .ring--inner,.ring--outer::before,.orb-text{animation:none}

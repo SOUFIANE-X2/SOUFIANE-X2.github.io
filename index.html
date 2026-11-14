@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=9">
 <script>
 /* Set the theme before paint so there is no flash. */
 try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}
@@ -49,14 +49,22 @@ try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.docu
 <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-ring"></span><span class="cursor-dot"></span></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
-<!-- ===== Intro curtain ===== -->
+<!-- ===== Intro / loading screen ===== -->
 <div id="intro" aria-hidden="true">
   <div class="intro-inner">
     <div class="intro-mark"><span>&lt;</span>S<span>/&gt;</span></div>
+    <p class="intro-name">Soufiane Inarain</p>
+    <p class="intro-role">Web Developer <span>&middot;</span> Portfolio 2026</p>
+
+    <div class="intro-socials">
+      <span class="intro-social" style="--i:0"><svg class="ico"><use href="#gh"/></svg></span>
+      <span class="intro-social" style="--i:1"><svg class="ico"><use href="#li"/></svg></span>
+      <span class="intro-social" style="--i:2"><svg class="ico"><use href="#dc"/></svg></span>
+    </div>
+
     <div class="intro-bar"><i></i></div>
-    <p class="intro-meta">Soufiane<span>.dev</span> — Portfolio 2026</p>
   </div>
-  <p class="intro-skip">Click to skip</p>
+  <p class="intro-skip">Click anywhere to skip</p>
 </div>
 
 <!-- ===== Header ===== -->
@@ -382,8 +390,8 @@ try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.docu
   </div>
 </noscript>
 
-<script src="js/projects.js?v=5"></script>
-<script src="js/skills.js?v=5"></script>
-<script src="js/main.js?v=5"></script>
+<script src="js/projects.js?v=9"></script>
+<script src="js/skills.js?v=9"></script>
+<script src="js/main.js?v=9"></script>
 </body>
 </html>

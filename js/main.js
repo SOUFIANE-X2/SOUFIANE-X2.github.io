@@ -24,9 +24,7 @@
     var el = document.getElementById("intro");
     if (!el) return;
 
-    var seen = false;
-    try { seen = sessionStorage.getItem("intro-seen") === "1"; } catch (e) {}
-    if (seen || reduceMotion) { el.remove(); return; }
+    if (reduceMotion) { el.remove(); root.classList.remove("lock"); return; }
 
     var done = false;
     var timer;
@@ -37,12 +35,11 @@
       clearTimeout(timer);
       el.classList.add("out");
       root.classList.remove("lock");
-      try { sessionStorage.setItem("intro-seen", "1"); } catch (e) {}
-      setTimeout(function () { el.remove(); }, 700);
+      setTimeout(function () { el.remove(); }, 950);
     }
 
     root.classList.add("lock");
-    timer = setTimeout(finish, 1850);
+    timer = setTimeout(finish, 2800);
     el.addEventListener("click", finish);
     window.addEventListener("keydown", finish, { once: true });
     window.addEventListener("wheel", finish, { once: true, passive: true });
